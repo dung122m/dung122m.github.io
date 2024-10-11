@@ -1,136 +1,293 @@
 <!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio - Tran Dinh Dung</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
-        h1 {
-            margin: 0;
-        }
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #000; /* Nền trang đen */
+        color: #e0e0e0; /* Màu chữ sáng */
+        scroll-behavior: smooth;
+      }
+
+      header {
+        background: linear-gradient(
+          135deg,
+          #343a40,
+          #007bff
+        ); /* Gradient cho header */
+        color: #fff;
+        padding: 60px 0;
+        text-align: center;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 3.5em;
+        letter-spacing: 2px;
+        transition: transform 0.3s;
+      }
+
+      header h1:hover {
+        transform: scale(1.05); /* Hiệu ứng phóng to tiêu đề */
+      }
+
+      header p {
+        font-size: 1.2em;
+      }
+
+      header a {
+        color: #ffdd57; /* Màu liên kết nổi bật */
+        font-weight: bold;
+        text-decoration: underline; /* Gạch chân cho liên kết */
+      }
+
+      .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 50px auto;
+        padding: 30px;
+        background: #1e1e1e; /* Nền tối cho phần container */
+        border-radius: 12px;
+        box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+      }
+
+      h2 {
+        color: #007bff; /* Màu xanh cho tiêu đề */
+        margin-bottom: 20px;
+        font-size: 2.5em; /* Kích thước chữ lớn hơn */
+        border-bottom: 3px solid #007bff;
+        display: inline-block;
+        padding-bottom: 5px;
+      }
+
+      .project,
+      .job {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1); /* Màu tối cho bóng đổ */
+        background-color: #2a2a2a; /* Nền tối hơn cho các dự án */
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .project:hover,
+      .job:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 20px rgba(255, 255, 255, 0.15); /* Hiệu ứng bóng đổ khi hover */
+      }
+
+      .project img {
+        max-width: 100%;
+        border-radius: 10px;
+        transition: transform 0.3s; /* Hiệu ứng cho hình ảnh */
+      }
+
+      .project img:hover {
+        transform: scale(1.05); /* Hiệu ứng phóng to hình ảnh */
+      }
+
+      .project h3,
+      .job h3 {
+        margin: 10px 0;
+        color: #fff; /* Màu chữ trắng cho tiêu đề */
+        font-size: 1.5em; /* Kích thước chữ tiêu đề nhỏ hơn */
+      }
+
+      .project a {
+        background-color: #007bff; /* Nền màu xanh cho nút */
+        color: #fff; /* Màu chữ trắng */
+        padding: 10px 15px; /* Padding cho nút */
+        border-radius: 5px; /* Bo tròn góc */
+        text-decoration: none; /* Bỏ gạch chân */
+        margin-top: 10px; /* Khoảng cách phía trên */
+        display: inline-block; /* Hiển thị inline-block để thêm khoảng cách */
+        transition: background-color 0.3s; /* Hiệu ứng chuyển màu */
+      }
+
+      .project a:hover {
+        background-color: #0056b3; /* Màu khi hover */
+      }
+
+      .achievements {
+        margin-top: 30px;
+      }
+
+      .achievements h2 {
+        color: #007bff; /* Màu xanh cho tiêu đề */
+        border-bottom: 3px solid #007bff;
+        padding-bottom: 5px;
+        margin-bottom: 20px;
+        display: inline-block;
+      }
+
+      .achievements ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .achievements li {
+        margin-bottom: 20px;
+        font-size: 1.1em;
+        color: #ccc; /* Màu chữ xám cho danh sách thành tựu */
+      }
+
+      .achievements a {
+        color: #007bff; /* Màu xanh cho liên kết */
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .achievements a:hover {
+        text-decoration: underline; /* Hiệu ứng gạch chân khi hover */
+      }
+
+      footer {
+        background: linear-gradient(
+          135deg,
+          #343a40,
+          #007bff
+        ); /* Gradient cho footer */
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        box-shadow: 0 -4px 10px rgba(255, 255, 255, 0.1);
+      }
+
+      footer p {
+        margin: 0;
+      }
+
+      /* Media Queries */
+      @media (max-width: 768px) {
         .container {
-            width: 90%;
-            max-width: 1000px;
-            margin: 20px auto;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+          padding: 20px;
         }
+
+        header h1 {
+          font-size: 2.5em;
+        }
+
+        header p {
+          font-size: 1em;
+        }
+
         h2 {
-            color: #333;
-            border-bottom: 2px solid #007BFF;
-            padding-bottom: 5px;
+          font-size: 1.5em;
         }
-        .projects, .experience, .education, .skills {
-            margin: 20px 0;
-        }
-        .project, .job {
-            margin-bottom: 20px;
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            background: #f9f9f9;
-            display: flex;
-            align-items: center;
-        }
-        .project img {
-            width: 100px;
-            height: 100px;
-            border-radius: 5px;
-            margin-right: 15px;
-        }
-        footer {
-            text-align: center;
-            margin-top: 20px;
-            padding: 10px 0;
-            background: #333;
-            color: white;
-        }
-        .skills p {
-            margin: 5px 0;
-        }
-        @media (max-width: 600px) {
-            .project {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .project img {
-                margin-bottom: 10px;
-            }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <header>
+      <h1>Tran Dinh Dung</h1>
+      <p>Web Developer</p>
+      <p>
+        Phone: <a href="tel:0326742311">0326742311</a> | Email:
+        <a href="mailto:dungtran122cq@gmail.com">dungtran122cq@gmail.com</a>
+      </p>
+      <p>Binh Thanh, Ho Chi Minh</p>
+    </header>
 
-<header>
-    <h1>Tran Dinh Dung</h1>
-    <p>Web Developer</p>
-    <p>Phone: 0326742311 | Email: dungtran122cq@gmail.com</p>
-    <p>Address: Binh Thanh, Ho Chi Minh</p>
-</header>
-
-<div class="container">
-    <section class="projects">
-        <h2>Dự Án</h2>
+    <div class="container">
+      <section class="projects">
+        <h2>Projects</h2>
         <div class="project">
-            <img src="https://via.placeholder.com/100" alt="E-commerce Website">
-            <div>
-                <h3>E-commerce Website</h3>
-                <p>Utilizes algorithms for product recommendations.</p>
-                <p>Technologies: HTML, CSS, JS, Next.js, Tailwind CSS, NodeJS.</p>
-            </div>
+          <img src="ecom.png" alt="E-commerce Website" />
+          <div>
+            <h3>E-commerce Website</h3>
+            <p>Utilizes algorithms for product recommendations.</p>
+            <p>Technologies: HTML, CSS, JS, Next.js, Tailwind CSS, NodeJS.</p>
+            <a
+              href="https://www.youtube.com/watch?v=pR_ZxUPA3dU"
+              target="_blank"
+              >Watch Demo</a
+            >
+          </div>
         </div>
         <div class="project">
-            <img src="https://via.placeholder.com/100" alt="Chat Real-time App">
-            <div>
-                <h3>Chat Real-time App</h3>
-                <p>Fully functional real-time messaging application.</p>
-                <p>Technologies: Laravel, MySQL, ReactJS.</p>
-            </div>
+          <img
+            src="the-ultimate-guide-to-chat-app-architecture.webp"
+            alt="Chat Real-time App"
+          />
+          <div>
+            <h3>Chat Real-time App</h3>
+            <p>Fully functional real-time messaging application.</p>
+            <p>Technologies: Laravel, MySQL, ReactJS.</p>
+            <a
+              href="https://github.com/dung122m/laravel_messenger"
+              target="_blank"
+              >GitHub Repository</a
+            >
+          </div>
         </div>
-    </section>
+      </section>
 
-    <section class="experience">
-        <h2>Kinh Nghiệm Làm Việc</h2>
+      <section class="experience">
+        <h2>Work Experience</h2>
         <div class="job">
-            <h3>FPT Software - ReactJS Internship (6/2021 - 9/2021)</h3>
-            <p>Design UI/UX, Optimize user interface, Interact with APIs.</p>
+          <h3>FPT Software - ReactJS Internship (6/2021 - 9/2021)</h3>
+          <p>Design UI/UX, Optimize user interface, Interact with APIs.</p>
         </div>
         <div class="job">
-            <h3>Vietlight Group.INC - Web Developer Internship (6/2024 - 8/2024)</h3>
-            <p>Develop email system, RestAPI, Real-time chat.</p>
+          <h3>
+            Vietlight Group.INC - Web Developer Internship (6/2024 - 8/2024)
+          </h3>
+          <p>Develop email system, RestAPI, Real-time chat.</p>
         </div>
-    </section>
+      </section>
 
-    <section class="education">
-        <h2>Giáo Dục</h2>
-        <p>Computer Science - Ho Chi Minh City University of Technology</p>
-    </section>
+      <section class="education">
+        <h2>Education</h2>
+        <p>Ho Chi Minh City University of Technology - Computer Science</p>
+      </section>
 
-    <section class="skills">
-        <h2>Kỹ Năng</h2>
+      <section class="skills">
+        <h2>Skills</h2>
         <p>Front-end: HTML, CSS, JS, Bootstrap, ReactJS</p>
         <p>Back-end: PHP, Laravel, MySQL</p>
-        <p>Soft Skills: Handling pressure, Adaptability, Multi-tasking, Self-study.</p>
-    </section>
-</div>
+        <p>
+          Soft Skills: Handling pressure, Adaptability, Multi-tasking,
+          Self-study.
+        </p>
+      </section>
 
-<footer>
-    <p>&copy; 2024 Tran Dinh Dung. All rights reserved.</p>
-</footer>
+      <section class="achievements">
+        <h2>Achievements</h2>
+        <ul>
+          <li>
+            <b>FPT Software Codewar - Qualification round Ho Chi Minh City</b>
+            (15<sup>th</sup>/300)
+            <br />
+            <a
+              href="https://web.facebook.com/FPTSoftware.tuyendung/posts/pfbid0PBqbPS1yyjuWbYMbY1M7dwGxNkF13VTMH4Ftr3QjPdxRFv7qbwvewpZAfZYY9Y1tl"
+              target="_blank"
+              >Link to competition</a
+            >
+          </li>
+          <li>
+            <b>FPT Software Codewar - Final Round</b> (27<sup>th</sup>/100)
+            <br />
+            <a href="https://imgur.com/a/tzkV2fc" target="_blank"
+              >Link to competition</a
+            >
+          </li>
+        </ul>
+      </section>
+    </div>
 
-</body>
+    <footer>
+      <p>&copy; 2024 Tran Dinh Dung. All rights reserved.</p>
+    </footer>
+  </body>
 </html>
