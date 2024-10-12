@@ -57,7 +57,11 @@
         border-radius: 12px;
         box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
       }
-
+      .education-contain {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
       h2 {
         color: #007bff;
         margin-bottom: 20px;
@@ -163,11 +167,15 @@
       }
 
       /* Skills */
+      .skills {
+        text-align: left;
+        margin-top: 30px;
+      }
+
       .skills-icons {
         display: flex;
         flex-wrap: wrap;
         gap: 20px;
-        justify-content: center;
         margin-top: 20px;
       }
 
@@ -183,7 +191,6 @@
 
       .soft-skills {
         display: flex;
-        justify-content: center;
         gap: 15px;
         flex-wrap: wrap;
         margin-top: 20px;
@@ -351,8 +358,8 @@
 
       <section class="education">
         <h2>Education</h2>
-        <div style="display: flex; gap: 10px; align-items: center">
-          <img src="HCMUT.svg" alt="HCMUT Logo" />
+        <div class="education-contain">
+          <img src="hcmut.jpg" alt="HCMUT Logo" />
           <p>Ho Chi Minh City University of Technology - Computer Science</p>
         </div>
       </section>
