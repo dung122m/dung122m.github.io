@@ -14,17 +14,13 @@
         font-family: "Arial", sans-serif;
         margin: 0;
         padding: 0;
-        background-color: #000; /* Nền trang đen */
-        color: #e0e0e0; /* Màu chữ sáng */
+        background-color: #000;
+        color: #e0e0e0;
         scroll-behavior: smooth;
       }
 
       header {
-        background: linear-gradient(
-          135deg,
-          #343a40,
-          #007bff
-        ); /* Gradient cho header */
+        background: linear-gradient(135deg, #343a40, #007bff);
         color: #fff;
         padding: 60px 0;
         text-align: center;
@@ -39,7 +35,7 @@
       }
 
       header h1:hover {
-        transform: scale(1.05); /* Hiệu ứng phóng to tiêu đề */
+        transform: scale(1.05);
       }
 
       header p {
@@ -47,9 +43,9 @@
       }
 
       header a {
-        color: #ffdd57; /* Màu liên kết nổi bật */
+        color: #ffdd57;
         font-weight: bold;
-        text-decoration: underline; /* Gạch chân cho liên kết */
+        text-decoration: underline;
       }
 
       .container {
@@ -57,68 +53,65 @@
         max-width: 1200px;
         margin: 50px auto;
         padding: 30px;
-        background: #1e1e1e; /* Nền tối cho phần container */
+        background: #1e1e1e;
         border-radius: 12px;
         box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
       }
 
       h2 {
-        color: #007bff; /* Màu xanh cho tiêu đề */
+        color: #007bff;
         margin-bottom: 20px;
-        font-size: 2.5em; /* Kích thước chữ lớn hơn */
+        font-size: 2.5em;
         border-bottom: 3px solid #007bff;
         display: inline-block;
         padding-bottom: 5px;
       }
 
-      .project,
-      .job {
+      .project {
         display: flex;
         flex-direction: column;
         padding: 20px;
         margin-bottom: 20px;
         border-radius: 10px;
-        box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1); /* Màu tối cho bóng đổ */
-        background-color: #2a2a2a; /* Nền tối hơn cho các dự án */
+        box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+        background-color: #2a2a2a;
         transition: transform 0.3s, box-shadow 0.3s;
       }
 
-      .project:hover,
-      .job:hover {
+      .project:hover {
         transform: translateY(-5px);
-        box-shadow: 0 6px 20px rgba(255, 255, 255, 0.15); /* Hiệu ứng bóng đổ khi hover */
+        box-shadow: 0 6px 20px rgba(255, 255, 255, 0.15);
       }
 
       .project img {
         max-width: 100%;
         border-radius: 10px;
-        transition: transform 0.3s; /* Hiệu ứng cho hình ảnh */
+        transition: transform 0.3s;
       }
 
       .project img:hover {
-        transform: scale(1.05); /* Hiệu ứng phóng to hình ảnh */
+        transform: scale(1.05);
       }
 
-      .project h3,
-      .job h3 {
+      .project h3 {
         margin: 10px 0;
-        color: #fff; /* Màu chữ trắng cho tiêu đề */
-        font-size: 1.5em; /* Kích thước chữ tiêu đề nhỏ hơn */
+        color: #fff;
+        font-size: 1.5em;
       }
 
       .project a {
-        background-color: #007bff; /* Nền màu xanh cho nút */
-        color: #fff; /* Màu chữ trắng */
-        padding: 10px 15px; /* Padding cho nút */
-        border-radius: 5px; /* Bo tròn góc */
-        text-decoration: none; /* Bỏ gạch chân */
-        margin-top: 10px; /* Khoảng cách phía trên */
-        display: inline-block; /* Hiển thị inline-block để thêm khoảng cách */
-        transition: background-color 0.3s; /* Hiệu ứng chuyển màu */
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 15px;
+        border-radius: 5px;
+        text-decoration: none;
+        margin-top: 10px;
+        display: inline-block;
+        transition: background-color 0.3s;
       }
 
       .project a:hover {
-        background-color: #0056b3; /* Màu khi hover */
+        background-color: #0056b3;
       }
 
       .achievements {
@@ -126,7 +119,7 @@
       }
 
       .achievements h2 {
-        color: #007bff; /* Màu xanh cho tiêu đề */
+        color: #007bff;
         border-bottom: 3px solid #007bff;
         padding-bottom: 5px;
         margin-bottom: 20px;
@@ -141,25 +134,21 @@
       .achievements li {
         margin-bottom: 20px;
         font-size: 1.1em;
-        color: #ccc; /* Màu chữ xám cho danh sách thành tựu */
+        color: #ccc;
       }
 
       .achievements a {
-        color: #007bff; /* Màu xanh cho liên kết */
+        color: #007bff;
         text-decoration: none;
         font-weight: bold;
       }
 
       .achievements a:hover {
-        text-decoration: underline; /* Hiệu ứng gạch chân khi hover */
+        text-decoration: underline;
       }
 
       footer {
-        background: linear-gradient(
-          135deg,
-          #343a40,
-          #007bff
-        ); /* Gradient cho footer */
+        background: linear-gradient(135deg, #343a40, #007bff);
         color: #fff;
         text-align: center;
         padding: 20px;
@@ -171,6 +160,112 @@
 
       footer p {
         margin: 0;
+      }
+
+      /* Skills */
+      .skills-icons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      .skills-icons img {
+        width: 50px;
+        height: 50px;
+        transition: transform 0.3s;
+      }
+
+      .skills-icons img:hover {
+        transform: scale(1.1);
+      }
+
+      .soft-skills {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+      }
+
+      .soft-skill {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 20px;
+        font-weight: bold;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s, transform 0.3s;
+      }
+
+      .soft-skill:hover {
+        background-color: #0056b3;
+        transform: translateY(-5px);
+      }
+
+      /* Timeline */
+      .timeline {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .job {
+        background-color: #2a2a2a;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .job:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 20px rgba(255, 255, 255, 0.15);
+      }
+
+      .job::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 5px;
+        height: 100%;
+        background-color: #007bff;
+      }
+
+      .job h3 {
+        margin: 0;
+        color: #fff;
+        font-size: 1.3em;
+      }
+
+      .job p {
+        margin: 10px 0 0;
+        color: #ccc;
+        font-size: 1em;
+      }
+
+      /* Education */
+      .education {
+        text-align: left;
+        margin-top: 30px;
+      }
+
+      .education img {
+        width: 100px;
+        display: block;
+        margin-bottom: 20px;
+      }
+
+      .education p {
+        font-size: 1.2em;
+        color: #ccc;
+        font-weight: bold;
+        padding: 10px;
+        display: inline-block;
       }
 
       /* Media Queries */
@@ -240,31 +335,67 @@
 
       <section class="experience">
         <h2>Work Experience</h2>
-        <div class="job">
-          <h3>FPT Software - ReactJS Internship (6/2021 - 9/2021)</h3>
-          <p>Design UI/UX, Optimize user interface, Interact with APIs.</p>
-        </div>
-        <div class="job">
-          <h3>
-            Vietlight Group.INC - Web Developer Internship (6/2024 - 8/2024)
-          </h3>
-          <p>Develop email system, RestAPI, Real-time chat.</p>
+        <div class="timeline">
+          <div class="job">
+            <h3>FPT Software - ReactJS Internship (6/2021 - 9/2021)</h3>
+            <p>Design UI/UX, Optimize user interface, Interact with APIs.</p>
+          </div>
+          <div class="job">
+            <h3>
+              Vietlight Group.INC - Web Developer Internship (6/2024 - 8/2024)
+            </h3>
+            <p>Develop email system, RestAPI, Real-time chat.</p>
+          </div>
         </div>
       </section>
 
       <section class="education">
         <h2>Education</h2>
-        <p>Ho Chi Minh City University of Technology - Computer Science</p>
+        <div style="display: flex; gap: 10px; align-items: center">
+          <img src="HCMUT.svg" alt="HCMUT Logo" />
+          <p>Ho Chi Minh City University of Technology - Computer Science</p>
+        </div>
       </section>
 
       <section class="skills">
         <h2>Skills</h2>
-        <p>Front-end: HTML, CSS, JS, Bootstrap, ReactJS</p>
-        <p>Back-end: PHP, Laravel, MySQL</p>
-        <p>
-          Soft Skills: Handling pressure, Adaptability, Multi-tasking,
-          Self-study.
-        </p>
+        <div class="skills-icons">
+          <img
+            src="https://img.icons8.com/color/48/000000/html-5.png"
+            alt="HTML"
+          />
+          <img
+            src="https://img.icons8.com/color/48/000000/css3.png"
+            alt="CSS"
+          />
+          <img
+            src="https://img.icons8.com/color/48/000000/javascript.png"
+            alt="JavaScript"
+          />
+          <img
+            src="https://img.icons8.com/color/48/000000/bootstrap.png"
+            alt="Bootstrap"
+          />
+          <img
+            src="https://img.icons8.com/color/48/000000/react-native.png"
+            alt="ReactJS"
+          />
+          <img src="https://img.icons8.com/color/48/000000/php.png" alt="PHP" />
+          <img
+            src="https://img.icons8.com/?size=100&id=114956&format=png&color=000000"
+            alt="Laravel"
+          />
+          <img
+            src="https://img.icons8.com/color/48/000000/mysql-logo.png"
+            alt="MySQL"
+          />
+        </div>
+        <div class="soft-skills">
+          <div class="soft-skill">Handling Pressure</div>
+          <div class="soft-skill">Adaptability</div>
+          <div class="soft-skill">Multi-tasking</div>
+          <div class="soft-skill">Self-study</div>
+        </div>
       </section>
 
       <section class="achievements">
